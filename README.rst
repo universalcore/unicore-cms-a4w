@@ -1,18 +1,74 @@
-unicore-cms-a4w
-====================
+Installation of Unicore CMS
+===========================
 
-A a4w project to use as the base for creating new apps
+.. code-block:: bash
 
-To use this repo as a base for your new app, do the following::
+    $ git clone https://github.com/universalcore/unicore-cms-a4w
+    $ cd unicore-cms-a4w
+    $ virtualenv ve
+    $ source ve/bin/activate
+    (ve)$ pip install -e .
 
-  $ git remote add a4w https://github.com/universalcore/unicore-cms-a4w.git
-  $ git fetch a4w
-  $ git merge a4w/develop
+Running Unicore CMS for local development
+-----------------------------------------
 
-You then need to rename all the instances where ``a4w`` is used.
-``git grep a4w`` should help you find all the mentions
+This is a Pyramid_ application, that uses Elasticsearch.
 
-To run the tests::
+For OS X we recommend you install Elasticsearch with Brew_:
 
-  $ pip install -r requirements-dev.txt
-  $ ./run_tests.sh
+.. code-block:: bash
+
+    $ brew install elasticsearch
+
+And start Elasticsearch in a separate Terminal tab:
+
+.. code-block:: bash
+
+    $ elasticsearch
+
+For Linux install it with your package manager (apt, rpm, yum etc...)
+and make sure it's running as a service.
+
+Then start the server:
+
+.. code-block:: bash
+
+    (ve)$ pserve development.ini --reload
+
+And view it in your web browser on http://localhost:8000/. You'll notice
+it is empty. This is because Elasticsearch hasn't been updated yet with
+the data from the sample Git repository, this can be done using the
+command line ``eg-tools`` utility::
+
+    eg-tools resync -f mappings/category.mapping.json -c development.ini -m unicore.content.models.Category -r True -p repo
+    eg-tools resync -f mappings/page.mapping.json -c development.ini -m unicore.content.models.Page -p repo
+    eg-tools resync -f mappings/localisation.mapping.json -c development.ini -m unicore.content.models.Localisation -p repo
+
+The output of this should be roughly something like the following::
+
+    (ve)$ eg-tools resync -f mappings/category.mapping.json -c development.ini -m unicore.content.models.Category -r True -p repo
+    Destroying index for master.
+    Creating index for master.
+    unicore.content.models.Category: 9 updated, 0 removed.
+
+    (ve)$ eg-tools resync -f mappings/page.mapping.json -c development.ini -m unicore.content.models.Page -p repo
+    unicore.content.models.Page: 6 updated, 0 removed.
+
+    (ve)$ eg-tools resync -f mappings/localisation.mapping.json -c development.ini -m unicore.content.models.Localisation -p repo
+    unicore.content.models.Localisation: 3 updated, 0 removed.
+
+Now loading http://localhost:8000/ should show the running site with
+the default content.
+
+
+Running Unicore CMS tests
+-------------------------
+
+.. code-block:: bash
+
+    (ve)$ pip install -r requirements-dev.txt
+    (ve)$ py.test cms
+
+
+.. _Pyramid: http://docs.pylonsproject.org/en/latest/docs/pyramid.html
+.. _Brew: http://brew.sh
