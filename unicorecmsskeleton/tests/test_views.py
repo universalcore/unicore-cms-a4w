@@ -2,7 +2,7 @@ from datetime import datetime
 from pyramid import testing
 
 from cms.tests.base import UnicoreTestCase
-from unicorecmsskeleton import main
+from unicorecmsa4w import main
 from unicore.content.models import Page, Localisation
 from webtest import TestApp
 
@@ -62,7 +62,7 @@ class TestViews(UnicoreTestCase):
 
         resp = self.app.get('/', status=200)
         self.assertTrue(
-            '<img alt="Welcome to the Skeleton" '
+            '<img alt="Welcome to the a4w" '
             'src="http://some.site.com/VNlJN07VKnfaB6k1imziAts4n0o='
             '/320x0/some-uuid"/>' in
             resp.body)

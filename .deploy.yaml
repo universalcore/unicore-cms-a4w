@@ -1,4 +1,4 @@
-name: unicore-cms-skeleton
+name: unicore-cms-a4w
 user: ubuntu
 buildscript: sideloader/deploy.sh
 postinstall: sideloader/postinstall.sh

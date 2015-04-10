@@ -5,10 +5,10 @@ def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
     config = Configurator(settings=settings)
-    config.add_translation_dirs('unicorecmsskeleton:locale')
+    config.add_translation_dirs('unicorecmsa4w:locale')
     config.include('cms')
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.scan()
 
-    config.override_asset('cms:templates/', 'unicorecmsskeleton:templates/')
+    config.override_asset('cms:templates/', 'unicorecmsa4w:templates/')
     return config.make_wsgi_app()

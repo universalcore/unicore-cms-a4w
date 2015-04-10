@@ -1,16 +1,16 @@
 <div metal:use-macro="view.global_template"
      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-     i18n:domain="unicorecmsskeleton">
+     i18n:domain="unicorecmsa4w">
     <div metal:fill-slot="content">
 
         <div tal:define="localisation view.get_localisation()" tal:omit-tag="">
             <div id="banner">
                 <a href="/declaration/">
                     <condition tal:omit-tag="" tal:condition="localisation and localisation.image_host and localisation.image">
-                        <img alt="Welcome to the Skeleton" src="${view.get_image_url(localisation.image_host, localisation.image, 320)}"/>
+                        <img alt="Welcome to the a4w" src="${view.get_image_url(localisation.image_host, localisation.image, 320)}"/>
                     </condition>
                     <condition tal:omit-tag="" tal:condition="not (localisation and localisation.image_host and localisation.image)">
-                        <img alt='Welcome to the Skeleton' src="/static/img/000000.png" />
+                        <img alt='Welcome to the a4w' src="/static/img/000000.png" />
                     </condition>
                 </a>
             </div>

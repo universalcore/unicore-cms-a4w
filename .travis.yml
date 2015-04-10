@@ -7,8 +7,8 @@ install:
   - pip install -r requirements-dev.txt --use-wheel
   - pip install -e . --use-wheel
 script:
-  - find ./unicorecmsskeleton -name '*.py' | xargs pep8
-  - find ./unicorecmsskeleton -name '*.py' | xargs pyflakes
+  - find ./unicorecmsa4w -name '*.py' | xargs pep8
+  - find ./unicorecmsa4w -name '*.py' | xargs pyflakes
   - ./run_tests.sh
 after_success:
   - coveralls

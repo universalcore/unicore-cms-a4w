@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp -a unicore-cms-skeleton ./build/
+cp -a unicore-cms-a4w ./build/

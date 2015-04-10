@@ -5,14 +5,14 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       metal:define-macro="layout"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="unicorecmsskeleton">
+      i18n:domain="unicorecmsa4w">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico" />
-    <title>Skeleton / Universal Core</title>
+    <title>a4w / Universal Core</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
     <meta name="description" content=""/>
-    <meta name="keywords" content="Skeleton keywords go here"/>
+    <meta name="keywords" content="a4w keywords go here"/>
     <link href="${request.static_url('cms:static/css/style.css')}?v=20141113" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -25,7 +25,7 @@
           </span>
           </div>
         </div>
-        <div class="logo"><a href="/" class="logo"><img alt='Skeleton' src="/static/img/logo000000.png" /></a></div>
+        <div class="logo"><a href="/" class="logo"><img alt='a4w' src="/static/img/logo000000.png" /></a></div>
         <div class="clr"></div>
     </div>
     <div class="push"></div><!--/PUSH-->
