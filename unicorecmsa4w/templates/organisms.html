@@ -1,0 +1,194 @@
+{% import 'atoms.html' as atoms %}
+{% import 'molecules.html' as molecules %}
+
+{% macro articleheader -%}
+<header class="article-header">
+  <div class="article-meta">
+    {{ molecules.author }}
+  </div>
+  {{ atoms.comcountalt }}
+</header>
+{%- endmacro %}
+
+{% macro articlelistthumbs -%}
+<ul class="list-block list-article-teasers">
+  <li class="article-teaser">
+    {{ molecules.articleteaserimage }}
+  </li>
+  <li class="article-teaser">
+    {{ molecules.articleteaserimage }}
+  </li>
+</ul>
+{%- endmacro %}
+
+{% macro articlelist -%}
+<ul class="list-block list-article-teasers">
+  <li class="article-teaser">
+    {{ molecules.articleteaser }}
+  </li>
+  <li class="article-teaser">
+    {{ molecules.articleteaser }}
+  </li>
+</ul>
+{%- endmacro %}
+
+{% macro comments -%}
+<div class="comments highlight-quaternary">
+
+  <header class="comments-header">
+    {{ atoms.comcountalttext }}
+  </header>
+
+  <ul class="comment-list">
+    <li class="comment">{{ molecules.comment }}</li>
+    <li class="comment">{{ molecules.comment }}</li>
+    <li class="comment">{{ molecules.comment }}</li>
+    <li class="comment">{{ molecules.comment }}</li>
+  </ul>
+
+  {{ atoms.btnwide }}
+  
+</div>
+{%- endmacro %}
+
+{% macro footer -%}
+<div class="footer" role="contentinfo">
+  {{ molecules.navsocial }}
+  {{ molecules.navlegallang }}
+  {{ molecules.copyright }}
+</div>
+{%- endmacro %}
+
+{% macro radio -%}
+<form action="">
+
+  <h3>Do you know the answer to this question?</h3>
+
+  <label for="sg-yes">
+    <input type="radio" id="sg-yes" name="sg">
+    Yes
+  </label>
+
+  <label for="sg-no">
+    <input type="radio" id="sg-no" name="sg">
+    No
+  </label>
+
+  <label for="sg-shrug">
+    <input type="radio" id="sg-shrug" name="sg">
+    ¯\_(ツ)_/¯
+  </label>
+
+  <button class="btn">Vote</button> <a href="#">View Results</a>
+
+</form>
+{%- endmacro %}
+
+{% macro formregistervisible -%}
+<form action="" class="form-sign-in highlight-primary">
+  
+  <fieldset>
+    <legend>Register</legend>
+
+    {{ atoms.inputwide }}
+    {{ atoms.tel }}
+    {{ atoms.inputwide }} 
+    {{ atoms.inputwide }} 
+
+    {{ molecules.radiosblock }} 
+    
+    {{ atoms.name","submit }}
+
+  </fieldset>
+
+</form>
+{%- endmacro %}
+
+{% macro formregister -%}
+<form action="" class="form-sign-in highlight-primary" id="register">
+  
+  <fieldset>
+    <legend>Register</legend>
+
+    {{ atoms.inputwide }}
+    {{ atoms.tel }}
+    {{ atoms.inputwide }} 
+    {{ atoms.inputwide }} 
+
+    {{ molecules.radiosblock }} 
+    
+    {{ atoms.name","submit }}
+
+  </fieldset>
+
+</form>
+{%- endmacro %}
+
+{% macro formsearch -%}
+<form action="" class="form-search highlight-primary" id="search">
+  
+  <fieldset>
+    <legend>Search</legend>
+    {{ molecules.searchbox }}
+  </fieldset>
+
+</form>
+{%- endmacro %}
+
+{% macro formsignin -%}
+<form action="" class="form-sign-in highlight-primary" id="signin">
+  
+  <fieldset>
+    <legend>Sign In</legend>
+    <p>Enter your username and 4-digit PIN</p>
+    {{ atoms.inputwide }}
+    {{ atoms.pin }}
+    {{ atoms.checkbox }}
+    
+    {{ atoms.submit }}
+
+  </fieldset>
+
+  <a href="#">I forgot my password</a>
+
+  <div class="sign-up">
+    <p>Don't have an account?<br />
+    <a href="#">Sign up here to get started</a></p>    
+  </div>
+
+</form>
+{%- endmacro %}
+
+{% macro poll -%}
+<form action="" class="poll highlight-quaternary">
+  {{ molecules.catandtitle }}
+  <div class="poll-options">
+    {{ molecules.radiosblock }}
+  </div>
+  <div class="poll-view-results">
+    <input type="submit" value="Vote" class="btn btn-wide">
+    <p class="cta"><a href="#">See results</a></p>    
+  </div>
+</form>
+{%- endmacro %}
+
+{% macro profile -%}
+<form action="" class="profile">
+  
+  <div class="profile-details">    
+    {{ atoms.avatar }}
+    <div class="profile-details-name">Susan</div>
+    <div class="profile-details-name">QuiteLongSurname</div>
+  </div>
+
+  {{ molecules.profiledetails}}
+
+  <p class="cta">
+    <a href="#">Change picture</a>
+    <a href="#">Change PIN</a>
+  </p>
+
+  <input type="submit" value="Update profile" class="btn btn-wide">
+
+</form>
+{%- endmacro %}

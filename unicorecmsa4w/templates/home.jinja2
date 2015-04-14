@@ -1,0 +1,35 @@
+{% import 'atoms.html' as atoms %}
+{% import 'molecules.html' as molecules %}
+{% import 'organisms.html' as organisms %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      dir="{{view.get_language_direction}}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+    <title>Unicef / Universal Core</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content="moms,maternal,baby,pregnancy,pregnant,expectant,mama,askmama,ask,mother,pain,birth,help"/>
+    <!-- <link rel="stylesheet" href="/static/sass/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 20em)" href="/static/sass/enhanced.css"> -->
+</head>
+
+{{molecules.a4wnavmain}}
+
+{% block main %}
+{{ molecules.overcomment }}
+  {{ molecules.overcomment }}
+  {{ molecules.overcomment }}
+  {{ atoms.cta }}
+  {{ organisms.poll }}
+  {{ organisms.footer }}
+{% endblock %}
+
+{{ organisms.formsignin }}
+{{ organisms.formregister }}
+{{ organisms.formsearch }}
+{{ molecules.a4wnav }}
+{{ atoms.navclose }}
