@@ -17,19 +17,19 @@
     <link rel="stylesheet" media="screen and (min-width: 20em)" href="/static/sass/enhanced.css"> -->
 </head>
 
-{{molecules.a4wnavmain}}
+{{molecules.a4wnavmain()}}
 
 {% block main %}
-{{ molecules.overcomment }}
-  {{ molecules.overcomment }}
-  {{ molecules.overcomment }}
-  {{ atoms.cta }}
-  {{ organisms.poll }}
-  {{ organisms.footer }}
+{{ molecules.overcomment() }}
+  {{ molecules.overcomment() }}
+  {{ molecules.overcomment() }}
+  {{ atoms.cta() }}
+  {{ organisms.poll() }}
+  {{ organisms.footer() }}
 {% endblock %}
 
-{{ organisms.formsignin }}
-{{ organisms.formregister }}
-{{ organisms.formsearch }}
-{{ molecules.a4wnav }}
-{{ atoms.navclose }}
+{{ organisms.formsignin() }}
+{{ organisms.formregister() }}
+{{ organisms.formsearch() }}
+{{ molecules.a4wnav() }}
+{{ atoms.navclose() }}

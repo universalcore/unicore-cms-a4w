@@ -1,65 +1,65 @@
 {% import 'atoms.html' as atoms %}
 {% import 'molecules.html' as molecules %}
 
-{% macro articleheader -%}
+{% macro articleheader() -%}
 <header class="article-header">
   <div class="article-meta">
-    {{ molecules.author }}
+    {{ molecules.author() }}
   </div>
-  {{ atoms.comcountalt }}
+  {{ atoms.comcountalt() }}
 </header>
 {%- endmacro %}
 
-{% macro articlelistthumbs -%}
+{% macro articlelistthumbs() -%}
 <ul class="list-block list-article-teasers">
   <li class="article-teaser">
-    {{ molecules.articleteaserimage }}
+    {{ molecules.articleteaserimage() }}
   </li>
   <li class="article-teaser">
-    {{ molecules.articleteaserimage }}
+    {{ molecules.articleteaserimage() }}
   </li>
 </ul>
 {%- endmacro %}
 
-{% macro articlelist -%}
+{% macro articlelist() -%}
 <ul class="list-block list-article-teasers">
   <li class="article-teaser">
-    {{ molecules.articleteaser }}
+    {{ molecules.articleteaser() }}
   </li>
   <li class="article-teaser">
-    {{ molecules.articleteaser }}
+    {{ molecules.articleteaser() }}
   </li>
 </ul>
 {%- endmacro %}
 
-{% macro comments -%}
+{% macro comments() -%}
 <div class="comments highlight-quaternary">
 
   <header class="comments-header">
-    {{ atoms.comcountalttext }}
+    {{ atoms.comcountalttext() }}
   </header>
 
   <ul class="comment-list">
-    <li class="comment">{{ molecules.comment }}</li>
-    <li class="comment">{{ molecules.comment }}</li>
-    <li class="comment">{{ molecules.comment }}</li>
-    <li class="comment">{{ molecules.comment }}</li>
+    <li class="comment">{{ molecules.comment() }}</li>
+    <li class="comment">{{ molecules.comment() }}</li>
+    <li class="comment">{{ molecules.comment() }}</li>
+    <li class="comment">{{ molecules.comment() }}</li>
   </ul>
 
-  {{ atoms.btnwide }}
-  
+  {{ atoms.btnwide() }}
+
 </div>
 {%- endmacro %}
 
-{% macro footer -%}
+{% macro footer() -%}
 <div class="footer" role="contentinfo">
-  {{ molecules.navsocial }}
-  {{ molecules.navlegallang }}
-  {{ molecules.copyright }}
+  {{ molecules.navsocial() }}
+  {{ molecules.navlegallang() }}
+  {{ molecules.copyright() }}
 </div>
 {%- endmacro %}
 
-{% macro radio -%}
+{% macro radio() -%}
 <form action="">
 
   <h3>Do you know the answer to this question?</h3>
@@ -84,68 +84,67 @@
 </form>
 {%- endmacro %}
 
-{% macro formregistervisible -%}
+{% macro formregistervisible() -%}
 <form action="" class="form-sign-in highlight-primary">
-  
+
   <fieldset>
     <legend>Register</legend>
 
-    {{ atoms.inputwide }}
-    {{ atoms.tel }}
-    {{ atoms.inputwide }} 
-    {{ atoms.inputwide }} 
+    {{ atoms.inputwide() }}
+    {{ atoms.tel() }}
+    {{ atoms.inputwide() }}
+    {{ atoms.inputwide() }}
 
-    {{ molecules.radiosblock }} 
-    
-    {{ atoms.name","submit }}
+    {{ molecules.radiosblock }}
+
 
   </fieldset>
 
 </form>
 {%- endmacro %}
 
-{% macro formregister -%}
+{% macro formregister() -%}
 <form action="" class="form-sign-in highlight-primary" id="register">
-  
+
   <fieldset>
     <legend>Register</legend>
 
-    {{ atoms.inputwide }}
-    {{ atoms.tel }}
-    {{ atoms.inputwide }} 
-    {{ atoms.inputwide }} 
+    {{ atoms.inputwide() }}
+    {{ atoms.tel() }}
+    {{ atoms.inputwide() }}
+    {{ atoms.inputwide() }}
 
-    {{ molecules.radiosblock }} 
-    
-    {{ atoms.name","submit }}
+    {{ molecules.radiosblock }}
+
+
 
   </fieldset>
 
 </form>
 {%- endmacro %}
 
-{% macro formsearch -%}
+{% macro formsearch() -%}
 <form action="" class="form-search highlight-primary" id="search">
-  
+
   <fieldset>
     <legend>Search</legend>
-    {{ molecules.searchbox }}
+    {{ molecules.searchbox() }}
   </fieldset>
 
 </form>
 {%- endmacro %}
 
-{% macro formsignin -%}
+{% macro formsignin() -%}
 <form action="" class="form-sign-in highlight-primary" id="signin">
-  
+
   <fieldset>
     <legend>Sign In</legend>
     <p>Enter your username and 4-digit PIN</p>
-    {{ atoms.inputwide }}
-    {{ atoms.pin }}
-    {{ atoms.checkbox }}
-    
-    {{ atoms.submit }}
+    {{ atoms.inputwide() }}
+    {{ atoms.pin() }}
+    {{ atoms.checkbox() }}
+
+    {{ atoms.submit() }}
 
   </fieldset>
 
@@ -153,35 +152,35 @@
 
   <div class="sign-up">
     <p>Don't have an account?<br />
-    <a href="#">Sign up here to get started</a></p>    
+    <a href="#">Sign up here to get started</a></p>
   </div>
 
 </form>
 {%- endmacro %}
 
-{% macro poll -%}
+{% macro poll() -%}
 <form action="" class="poll highlight-quaternary">
-  {{ molecules.catandtitle }}
+  {{ molecules.catandtitle() }}
   <div class="poll-options">
-    {{ molecules.radiosblock }}
+    {{ molecules.radiosblock() }}
   </div>
   <div class="poll-view-results">
     <input type="submit" value="Vote" class="btn btn-wide">
-    <p class="cta"><a href="#">See results</a></p>    
+    <p class="cta"><a href="#">See results</a></p>
   </div>
 </form>
 {%- endmacro %}
 
-{% macro profile -%}
+{% macro profile() -%}
 <form action="" class="profile">
-  
-  <div class="profile-details">    
-    {{ atoms.avatar }}
+
+  <div class="profile-details">
+    {{ atoms.avatar() }}
     <div class="profile-details-name">Susan</div>
     <div class="profile-details-name">QuiteLongSurname</div>
   </div>
 
-  {{ molecules.profiledetails}}
+  {{ molecules.profiledetails() }}
 
   <p class="cta">
     <a href="#">Change picture</a>
