@@ -9,18 +9,59 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
-    <title>Unicef / Universal Core</title>
+    <title>Action for Women</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
     <meta name="description" content=""/>
-    <meta name="keywords" content="moms,maternal,baby,pregnancy,pregnant,expectant,mama,askmama,ask,mother,pain,birth,help"/>
+    <meta name="keywords" content="women"/>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" media="screen and (min-width: 20em)" href="/static/css/enhanced.css">
+
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Exo+2:400,700:latin' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <style>
+    .sg-category {
+      margin-bottom: 2em;
+      padding: 1em 0 2em 0;
+      border-bottom: solid 2px #999;
+    }
+    
+    .sg-category a {
+      display: inline-block;
+      padding: 0.25em 0;
+    }
+
+    .sg-link {
+      padding: 0.5em 0.5em 0 0.5em;
+      margin-bottom: 0.5em;
+      text-align: right;
+      border-bottom: solid 1px #ccc;
+    }
+
+    .sg-marker {
+      text-align: right;
+    }
+  </style>
 </head>
 
 {{molecules.a4wnavmain()}}
 
+<main id="main">
 {% block content %}
 {% endblock %}
+</main>
 
 {{ organisms.formsignin() }}
 {{ organisms.formregister() }}
