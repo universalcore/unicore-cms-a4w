@@ -58,3 +58,7 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+#sass files
+cms/static/sass/.sass-cache/*
+cms/static/css/*.css
+cms/static/css/*.map
