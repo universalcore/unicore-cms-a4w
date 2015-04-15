@@ -1,0 +1,435 @@
+// Action4Women
+
+@import "a4wcolors";
+
+@include links($colorFirst);
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body,
+input,
+textarea {
+  font-family: "Exo 2", sans-serif;
+  color: $anotherShadeOfGrey;
+}
+
+// dark grey
+.highlight-primary {
+  color: $colorSecond;
+  p {
+    color: $anotherShadeOfGrey;
+  }
+}
+
+// dark grey
+.highlight-secondary {
+  color: $anotherShadeOfGrey;
+  li {
+    border: none; 
+  }
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// blue
+.highlight-tertiary {
+  color: $colorThird;
+}
+
+// light grey
+.highlight-quaternary {
+  color: $colorFourth;
+}
+
+
+
+// typography
+
+p {
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.over-text, a.over-text,  .over .link-comments {
+  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.over {
+  min-height: 320px;
+}
+
+// articles
+
+.category {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: lighten($colorSecond, 60%);
+}
+
+.article-title {
+  font-size: 2em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.article-author {
+  color: $colorFirst;
+  padding-bottom: 0;
+}
+
+.article-date {
+  font-size: 0.7em;
+}
+
+.article-header {
+  @include clearfix;
+  padding: 0 1em 1em 1em;
+  .article-meta {
+    float: left;
+    padding-top: 0.75em;
+  }
+  .link-comments {
+    float: right;
+  }
+}
+
+article {
+  padding: 0 1em 4em 1em;
+  p:first-child {
+    color: $colorFirst;
+    font-size: 1.25em;
+  }
+}
+
+// buttons
+
+.btn {
+  background-color: $colorFirst;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover {
+    color: #ffffff;
+    background-color: lighten($colorFirst, 10%);
+  }
+}
+
+// polls
+
+.poll-results {
+  padding: 1em;
+  p {
+    margin-bottom: 0.25em;
+  }
+}
+
+.poll-result {
+  margin-bottom: 1em;
+}
+
+.poll-result-answer {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
+
+.poll-result-bar {
+  position: relative;
+  background-color: $colorFirst;
+  height: 2.5em;
+  &:after {
+    content: attr(data-percent);
+    position: absolute;
+    right: 0;
+    color: $colorSecond;
+    font-weight: bold;
+    font-size: 2em;
+    right: -2.25em;
+    top: -0.1em;
+  }
+}
+
+.poll-results-bar-large {
+  &:after {
+    right: 0.25em;
+  }
+}
+
+.poll-result:nth-of-type(1) .poll-result-bar {
+  background-color: lighten($colorFirst, 20%);
+}
+
+.poll-result:nth-of-type(2) .poll-result-bar {
+  background-color: lighten($colorFirst, 10%);
+}
+
+.poll-result:nth-of-type(3) .poll-result-bar {
+  background-color: $colorFirst;
+}
+
+.poll-result:nth-of-type(4) .poll-result-bar {
+  background-color: darken($colorFirst, 10%);
+}
+
+.poll-result:nth-of-type(5) .poll-result-bar {
+  background-color: darken($colorFirst, 20%);
+}
+
+.poll-result:nth-of-type(6) .poll-result-bar {
+  background-color: darken($colorFirst, 30%);
+}
+
+
+// comments
+
+.link-comments {
+  color: lighten($colorSecond, 50%);
+  text-decoration: none;
+  &:hover {
+    color: $colorSecond;
+    text-decoration: underline;
+  }
+}
+
+.link-comments-alt {
+  color: $colorFirst;
+  &:hover {
+    color: $colorFirst;
+  }
+}
+
+.comments {
+  padding: 0 1em 1em 1em;
+  margin: 0 1.5em;
+  font-size: 0.9em;
+}
+
+.comments-header {
+  padding-bottom: 1em;
+}
+
+.comment-list {
+  @include no-bull;
+  @include no-mp;
+  p {
+    margin-top: 0;
+  }
+}
+
+.comment {
+  padding: 1em 0;
+  border-bottom: solid 1px lighten($colorSecond, 70%);
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.comment-actions {
+  padding: 0;
+  li:first-child {
+    a {
+      padding-left: 0;
+    }
+  }
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.avatar {
+  float: left;
+  margin: 0 1em 0.5em 0;
+}
+
+.comment-add {
+  float: right;
+  text-transform: uppercase;
+  padding-top: 0.5em;
+  font-weight: bold;
+}
+
+.add-comment {
+  padding: 1em;
+}
+
+// forms and validation
+
+.error {
+  color: $colorFirst;
+}
+
+.input-error {
+  border: solid 1px $colorFirst;
+}
+
+textarea {
+  margin: 1em 0 0.5em 0;
+}
+
+// footer 
+
+[role="contentinfo"] {
+  background: $colorSecond;
+  text-align: center;
+  padding-top: 1em;
+  border-top: solid 1px #000000;
+  font-size: 0.9em;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1em;
+  margin-top: 1em;
+  border-top: solid 1px $anotherShadeOfGrey;
+}
+
+.nav-social {
+  text-align: center;
+  li {
+    border-color: transparent;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav-legal-lang {
+  text-align: center;
+  li {
+  border-color: $anotherShadeOfGrey;
+    &:last-child {
+      padding-left: 0.5em;
+    }
+  }
+}
+
+.poll {
+  padding: 1em;
+  border-top: solid 1px $anotherShadeOfGrey;
+  .article-title {
+    margin-bottom: 0.25em;
+  }
+}
+
+.poll-options {
+  margin-bottom: 1em;
+  font-size: 1.25em;
+  line-height: 2;
+  input {
+    margin-right: 1em;
+    position: relative;
+    top: -0.25em;
+  }
+}
+
+.cta {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0;
+  a {
+    display: block;
+    padding: 1em 0;
+  }
+}
+
+// profile, etc.
+
+.profile {
+  padding: 5em 1em 1em 1em;
+}
+
+.profile-details {
+  @include clearfix;
+  line-height: 1;
+  margin-bottom: 2em;
+}
+
+.profile-details-name {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+// main nav
+
+.nav-main {
+  padding: 1em 2em;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 4em;
+}
+
+.nav-menu {
+  .nav-main {
+    position: relative;
+  }
+}
+
+// forms
+
+form {
+  padding: 1em;
+  label, legend {
+    text-transform: uppercase;
+    display: block;
+  }
+  legend {
+    padding: 0;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  label > input {
+    margin-top: 0.5em;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="search"],
+  input[type="checkbox"],
+  input[type="tel"] {
+    background-color: transparent;
+    border: solid 1px $anotherShadeOfGrey;
+  }
+}
+
+.form-sign-in {
+  input[type="submit"] {
+    margin: 1em 0 2em 0;
+  }
+}
+
+.sign-up {
+  margin-top: 5em;
+}
+
+.list-article-teasers {
+  a {
+    text-decoration: none;
+    padding: 0;
+  }
+  .article-title {
+    margin-bottom: 1em;
+  }
+}
+
+.article-teaser {
+  padding: 1em;
+  @include clearfix;
+}
