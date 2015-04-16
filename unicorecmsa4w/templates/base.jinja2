@@ -2,15 +2,14 @@
 {% import 'molecules.html' as molecules %}
 {% import 'organisms.html' as organisms %}
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      dir="{{view.get_language_direction}}">
+<!DOCTYPE html>
+<html dir="{{view.get_language_direction}}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
     <title>Action for Women</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta name="description" content=""/>
     <meta name="keywords" content="women"/>
     <link rel="stylesheet" href="/static/css/style.css">
@@ -30,32 +29,9 @@
       s.parentNode.insertBefore(wf, s);
     })();
   </script>
-
-  <style>
-    .sg-category {
-      margin-bottom: 2em;
-      padding: 1em 0 2em 0;
-      border-bottom: solid 2px #999;
-    }
-    
-    .sg-category a {
-      display: inline-block;
-      padding: 0.25em 0;
-    }
-
-    .sg-link {
-      padding: 0.5em 0.5em 0 0.5em;
-      margin-bottom: 0.5em;
-      text-align: right;
-      border-bottom: solid 1px #ccc;
-    }
-
-    .sg-marker {
-      text-align: right;
-    }
-  </style>
 </head>
 
+<body>
 {{molecules.a4wnavmain()}}
 
 <main id="main">
@@ -68,3 +44,8 @@
 {{ organisms.formsearch() }}
 {{ molecules.a4wnav() }}
 {{ atoms.navclose() }}
+</body>
+
+<script src="/static/js/main.js" async></script>
+
+</html>
