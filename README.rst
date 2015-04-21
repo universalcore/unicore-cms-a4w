@@ -1,7 +1,7 @@
 A4W Style Guide
 ================================
 
-For a general overview of Unicore's WoW, see our `WoW Documentation <http://ways-of-working.readthedocs.org/en/latest/process.html#our-front-end-development-process>`_. Overall, we use an approach known as Progressive Enhancement, in the way we construct out HTML, CSS and JS.
+For a general overview of Unicore's WoW, see our `WoW Documentation <http://ways-of-working.readthedocs.org/en/latest/process.html#our-front-end-development-process>`_. Overall, we use an approach known as Progressive Enhancement.
 
 HTML
 ----
@@ -11,7 +11,7 @@ We use Jinja2_ for our templating language. We use an `atomic-design`_-like patt
 CSS
 ---
 
-We use `Sass`_, and Sass will need to be run locally to compile the ``.scss`` files into the ``.css`` files. See below on how to install and run sass. We set the `output style`_ to ``:compressed``
+We use `Sass`_ to create our CSS files. It will need to be run locally to compile the ``.scss`` files into the ``.css`` files. See below on how to install and run sass. We set the `output style`_ to ``:compressed``
 
 The main Sass file is ``/unicorecmsa4w/static/sass/style.scss``. This imports partials from the ``sass`` directory. We use a ``link rel="stylesheet" media="screen and (min-width: 20em)"`` to pull in (the compiled version of) ``/unicorecmsa4w/static/sass/enhanced.scss``, (which pulls in a few additional partials from the ``sass`` directory), and a Google web font.
 
@@ -26,7 +26,7 @@ loadJS`_ to asynchronously load our minified JavaScript file.
 
 More Details
 ------------
-Much of the front-end work is taken from Fufu_ which contains further details on the problems_ and solutions faced and implemented here.
+Much of the front-end work is taken from Fufu_ which contains further details on the problems_ and solutions_ faced and implemented here.
 
 Installation of Unicore CMS A4W
 ================================
