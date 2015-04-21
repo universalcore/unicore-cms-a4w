@@ -120,43 +120,44 @@
 }
 
 // off canvas
+.js {
+  #nav-close {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $colorSecond;
+    opacity: 0.8;
+  }
 
-#nav-close {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: $colorSecond;
-  opacity: 0.8;
-}
+  .nav-main-active {
+    width: 20em;
+    max-width: 100%;
+  }
 
-.nav-main-active {
-  width: 20em;
-  max-width: 100%;
-}
+  #menu {
+    @include displaymenu;
+  }
 
-#menu {
-  @include displaymenu;
-}
+  #close {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    z-index: 2;
+  }
 
-#close {
-  position: absolute;
-  top: 1em;
-  right: 2em;
-  z-index: 2;
-}
+  #back {
 
-#back {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+  }
 
-  position: absolute;
-  top: 1em;
-  left: 1em;
-}
-
-#signin,
-#search,
-#register  {
-  @include displaymenu;
+  #signin,
+  #search,
+  #register  {
+    @include displaymenu;
+  }
 }
