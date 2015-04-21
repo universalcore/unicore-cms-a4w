@@ -59,6 +59,6 @@ coverage.xml
 docs/_build/
 
 #sass files
-unicorecmsa4w/static/sass/.sass-cache/*
+*.scssc
 unicorecmsa4w/static/css/*.css
 unicorecmsa4w/static/css/*.map
