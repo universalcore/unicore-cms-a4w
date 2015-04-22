@@ -1,0 +1,228 @@
+{% import 'atoms.html' as atoms %}
+
+{% macro a4wnavmain() -%}
+<nav class="nav-main highlight-primary">
+  {{ atoms.a4wlogo() }}
+  <a href="#menu" id="jump"><i class="i i-hamburger"></i><span class="visuallyhidden">menu</span></a>
+  <a href="#main" id="close" class="hidden"><i class="i i-close" aria-label="close"></i><span class="visuallyhidden">close</span></a>
+  <a href="#main" id="back" class="hidden"><i class="i i-back" aria-label="back"></i><span class="visuallyhidden">back</span></a>
+</nav>
+{%- endmacro %}
+
+{% macro a4wnav() -%}
+<nav class="nav-menu highlight-primary" id="menu">
+  <ul class="nav list-block" role="navigation">
+    <li><a href="signin.html" id="show-signin">Sign In</a></li>
+    <li><a href="register.html" id="show-register">Register</a></li>
+    <li><a href="search.html" id="show-search">Search</a></li>
+    <li><a href="#">Stories</a></li>
+    <li><a href="#">Support</a></li>
+    <li><a href="#">FAQs</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+  <p><a href="#" class="lang-change">Changer de langue à Française</a></p>
+</nav>
+{%- endmacro %}
+
+{% macro addcomment() -%}
+<div class="add-comment" id="add-comment">
+  <form action="">
+    <label for="your-comment">Add your comment
+      <textarea name="your-comment" id="your-comment"></textarea>
+    </label>
+    <input type="submit" value="Comment" class="btn btn-wide">
+  </form>
+</div>
+{%- endmacro %}
+
+{% macro author() -%}
+<p class="article-author">by The Author</p>
+<p class="article-date">1 Jan 2015</p>
+{%- endmacro %}
+
+{% macro articleteaserimage() -%}
+<h4 class="category">Category</h4>
+
+<a href="#" class="article-teaser-thumb">
+  <img src="/static/img/squitten-s.jpg" alt="A kitten in a square">
+</a>
+
+<div class="article-teaser-text">
+  <a href="#">
+    <h3 class="article-title">Article title that's a bit longer</h3>
+  </a>
+  <p>Optional extra teaser text that's about two sentences long.</p>
+</div>
+{%- endmacro %}
+
+{% macro articleteaser() -%}
+{{catandtitlelinked}}
+<p>Optional extra teaser text that's about one sentence long.</p>
+{%- endmacro %}
+
+{% macro articletext() -%}
+<p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+
+<p>Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+
+<p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
+
+<p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+{%- endmacro %}
+
+{% macro catandtitlelinked() -%}
+<h4 class="category">Category</h4>
+<h3 class="article-title"><a href="">Article title that's a bit longer</a></h3>
+{%- endmacro %}
+
+{% macro catandtitle() -%}
+<h4 class="category">Category</h4>
+<h3 class="article-title">Article title that's a bit longer</h3>
+{%- endmacro %}
+
+{% macro comment() -%}
+{{atoms.avatar}}
+<span class="comment-meta">
+  <span class="comment-author">Anon</span> - 2min ago
+</span>
+
+<p>Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains. Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.</p>
+
+<ul class="comment-actions nav list-inline">
+  <li><a href="#">Reply</a></li><li><a href="#">Report</a></li>
+</ul>
+{%- endmacro %}
+
+{% macro copyright() -%}
+<div class="copyright">
+  <p>&copy; 2015 The NGO.<br />All rights reserved.</p>
+</div>
+{%- endmacro %}
+
+{% macro searchhiddenlabel() -%}
+<label for="input-search"><span class="visuallyhidden">Search:</span>
+  {{ atoms.inputsearch() }}
+</label>
+{%- endmacro %}
+
+{% macro searchandlabel() -%}
+<label for="input-search">Search:
+  {{ atoms.inputsearch() }}
+</label>
+{%- endmacro %}
+
+{% macro navlegallang() -%}
+<ul class="nav nav-legal-lang list-inline" role="navigation">
+  <li><a href="#">List Item 1</a></li><li><a href="#">List Item 2</a></li><li>Site Language: <a href="#" class="active">One</a> <a href="#">Two</a></li>
+</ul>
+{%- endmacro %}
+
+{% macro navsocial() -%}
+<ul class="nav nav-social list-inline">
+  <li>{{ atoms.iconfacebook() }}</li><li>{{ atoms.icontwitter() }}</li>
+</ul>
+{%- endmacro %}
+
+{% macro overpoll() -%}
+<div class="over over-poll">
+  <a href="#" class="over-text">
+    {{ catandtitle() }}
+    <p>Optional extra teaser text that's about one sentence long.</p>
+    {{ atoms.commentcounter() }}
+  </a>
+</div>
+{%- endmacro %}
+
+{% macro pollresults() -%}
+<div class="poll-results">
+  <div class="poll-result">
+    <span class="poll-result-answer">All</span>
+    <div class="poll-result-bar poll-results-bar-large" style="width: 100%" data-percent="100%"></div>
+  </div>
+  <div class="poll-result">
+    <span class="poll-result-answer">Yes</span>
+    <div class="poll-result-bar" style="width: 75%" data-percent="75%"></div>
+  </div>
+  <div class="poll-result">
+    <span class="poll-result-answer">No</span>
+    <div class="poll-result-bar" style="width: 10%" data-percent="10%"></div>
+  </div>
+  <div class="poll-result">
+    <span class="poll-result-answer">Maybe</span>
+    <div class="poll-result-bar" style="width: 15%" data-percent="15%"></div>
+  </div>
+</div>
+{%- endmacro %}
+
+{% macro profiledetails() -%}
+<p>Profile details</p>
+
+<label for="name" class="label-wide">Name
+  <input type="text" class="input-wide" name="name" id="name" />
+</label>
+
+<label for="surname" class="label-wide">Surname
+  <input type="text" class="input-wide" name="surname" id="surname" />
+</label>
+{%- endmacro %}
+
+{% macro radiosblock() -%}
+<label for="sg-one" class="label-wide">
+  <input type="radio" id="sg-one" name="sg">
+  One
+</label>
+
+<label for="sg-two" class="label-wide">
+  <input type="radio" id="sg-two" name="sg">
+  Two
+</label>
+
+<label for="sg-three" class="label-wide">
+  <input type="radio" id="sg-three" name="sg">
+  Three
+</label>
+{%- endmacro %}
+
+{% macro radios() -%}
+<label for="sg-one">
+  <input type="radio" id="sg-one" name="sg">
+  One
+</label>
+
+<label for="sg-two">
+  <input type="radio" id="sg-two" name="sg">
+  Two
+</label>
+
+<label for="sg-three">
+  <input type="radio" id="sg-three" name="sg">
+  Three
+</label>
+{%- endmacro %}
+
+{% macro searchbox() -%}
+{{searchhiddenlabel()}}
+{{atoms.submit()}}
+{%- endmacro %}
+
+{% macro overcomment() -%}
+<div class="over">
+  <img src="/static/img/squitten.jpg" alt="A kitten in a square">
+  <a href="#" class="over-text">
+    {{ catandtitle() }}
+    <p>Optional extra teaser text that's about one sentence long.</p>
+    {{ atoms.commentcounter() }}
+  </a>
+</div>
+{%- endmacro %}
+
+{% macro over() -%}
+<div class="over">
+  <img src="/static/img/squitten.jpg" alt="A kitten in a square">
+  <a href="#" class="over-text">
+    {{ molecules.catandtitle() }}
+    <p>Optional extra teaser text that's about one sentence long.</p>
+  </a>
+</div>
+{%- endmacro %}
+

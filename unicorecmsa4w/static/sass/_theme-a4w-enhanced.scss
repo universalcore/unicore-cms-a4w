@@ -1,0 +1,163 @@
+@import "a4wcolors";
+
+// dark grey
+.highlight-primary {
+  background-color: $colorSecond;
+  color: #ffffff;
+  a {
+    color: #ffffff;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+// light grey
+.highlight-secondary {
+  background-color: $colorFourth;
+  color: $colorFourth;
+}
+
+// blue
+.highlight-tertiary {
+  color: #ffffff;
+  background: $colorThird url(img/zigzag.png) 0 0 repeat;
+}
+
+.highlight-quaternary {
+  color: $anotherShadeOfGrey;
+  background-color: $colorFourth; 
+}
+
+.btn {
+  background: $colorFirst url(img/zigzag.png) 0 0 repeat;
+}
+
+
+.over {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent url(img/zigzag.png) 0 0 repeat;
+    z-index: 0;
+  }
+}
+
+.over-poll {
+  background-color: $colorFirst; 
+}
+
+.article-teaser-thumb {
+  float: left;
+  width: 20%;
+  img {
+    width: 100%;
+  }
+}
+
+.article-teaser-text {
+  float: right;
+  width: 75%;
+}
+
+.nav-social {
+  background: $colorSecond;
+  a {
+    opacity: 0.5;
+  }
+}
+
+.nav-legal-lang {
+  background: $colorSecond;
+  li {
+  border-color: $anotherShadeOfGrey;
+  }
+  a {
+    color: $anotherShadeOfGrey;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  .active {
+    color: #ffffff;
+  }
+}
+
+.nav-menu {
+  li {
+    border: none;
+  }
+  li:nth-of-type(1) {
+    border-top: solid 1px $anotherShadeOfGrey;
+  }
+  li:nth-of-type(2) {
+    border-bottom: solid 1px $anotherShadeOfGrey;
+    padding-bottom: 1em;
+  }
+  li:nth-of-type(3) {
+    margin-top: 1em;
+  }
+  li:last-child {
+    margin-bottom: 1em;
+  }
+  .nav {
+    a {
+      font-size: 2em;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
+
+.lang-change {
+  padding-left: 2em;
+}
+
+// off canvas
+.js {
+  #nav-close {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $colorSecond;
+    opacity: 0.8;
+  }
+
+  .nav-main-active {
+    width: 20em;
+    max-width: 100%;
+  }
+
+  #menu {
+    @include displaymenu;
+  }
+
+  #close {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    z-index: 2;
+  }
+
+  #back {
+
+    position: absolute;
+    top: 1em;
+    left: 1em;
+  }
+
+  #signin,
+  #search,
+  #register  {
+    @include displaymenu;
+  }
+}
