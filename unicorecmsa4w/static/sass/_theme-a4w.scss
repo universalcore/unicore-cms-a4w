@@ -30,7 +30,7 @@ textarea {
 .highlight-secondary {
   color: $anotherShadeOfGrey;
   li {
-    border: none; 
+    border: none;
   }
   a {
     text-transform: uppercase;
@@ -124,6 +124,15 @@ article {
   &:hover {
     color: #ffffff;
     background-color: lighten($colorFirst, 10%);
+  }
+}
+
+a {
+  &.btn {
+    color: #ffffff;
+    &:hover, &:visited {
+      color: #ffffff;
+    }
   }
 }
 
@@ -281,7 +290,7 @@ textarea {
   margin: 1em 0 0.5em 0;
 }
 
-// footer 
+// footer
 
 [role="contentinfo"] {
   background: $colorSecond;
@@ -305,6 +314,12 @@ textarea {
   }
   a {
     text-decoration: none;
+  }
+}
+
+.nav-social-share {
+  a {
+    display: inline-block;
   }
 }
 

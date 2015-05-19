@@ -23,7 +23,7 @@
   overflow: hidden;
   height: 30px;
   width: 30px;
-  position: relative;  
+  position: relative;
 }
 
 .i-comment {
@@ -42,6 +42,20 @@
 
 .i-twitter {
   background-image: url(img/icon-twitter.png);
+}
+
+i-facebook-share {
+  background-image: url(img/icon-facebook-share.png);
+  margin-right: 4em;
+}
+
+.i-twitter-share {
+  background-image: url(img/icon-twitter-share.png);
+}
+
+.i-email-share {
+  background-image: url(img/icon-email-share.png);
+  margin-left: 4em;
 }
 
 .i-hamburger {
