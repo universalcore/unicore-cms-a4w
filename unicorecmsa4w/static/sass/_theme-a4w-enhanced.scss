@@ -26,7 +26,7 @@
 
 .highlight-quaternary {
   color: $anotherShadeOfGrey;
-  background-color: $colorFourth; 
+  background-color: $colorFourth;
 }
 
 .btn {
@@ -43,13 +43,17 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: transparent url(img/zigzag.png) 0 0 repeat;
+    background-color: transparent;
+    background-color: rgba(0,0,0,0.1);
+    background-image: url(img/zigzag.png);
+    background-position: 0 0;
+    background-repeat: repeat;
     z-index: 0;
   }
 }
 
 .over-poll {
-  background-color: $colorFirst; 
+  background-color: $colorFirst;
 }
 
 .article-teaser-thumb {
@@ -159,5 +163,24 @@
   #search,
   #register  {
     @include displaymenu;
+  }
+}
+
+
+@media (min-device-width: 50em) {
+  html {
+    padding-top: 2em;
+    &:before {
+      content: "This site is optimised for mobile viewing. Access this site on your mobile phone for the best user experience.";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      color: $colorSecond;
+      z-index: 1;
+      text-align: center;
+      line-height: 2;
+    }
   }
 }

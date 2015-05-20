@@ -344,11 +344,14 @@ textarea {
 .poll-options {
   margin-bottom: 1em;
   font-size: 1.25em;
-  line-height: 2;
+  line-height: 1;
   input {
     margin-right: 1em;
     position: relative;
     top: -0.25em;
+  }
+  label {
+    margin-bottom: 1em;
   }
 }
 
