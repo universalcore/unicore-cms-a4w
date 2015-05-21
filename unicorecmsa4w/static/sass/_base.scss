@@ -104,6 +104,12 @@ body {
   @include no-m;
 }
 
+body {
+  a {
+    word-wrap: break-word;
+  }
+}
+
 // Typography
 
 h1, h2, h3, h4 {
