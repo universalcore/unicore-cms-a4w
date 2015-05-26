@@ -385,7 +385,7 @@ textarea {
 // main nav
 
 .nav-main {
-  padding: 1em 2em;
+  padding: 0.5em 1.5em 4em 1em;
   float: left;
   position: absolute;
   top: 0;
@@ -421,7 +421,8 @@ form {
   input[type="number"],
   input[type="search"],
   input[type="checkbox"],
-  input[type="tel"] {
+  input[type="tel"],
+  input[type="password"] {
     background-color: transparent;
     border: solid 1px $anotherShadeOfGrey;
   }
@@ -450,4 +451,10 @@ form {
 .article-teaser {
   padding: 1em;
   @include clearfix;
+}
+
+.form-sign-in {
+  input {
+    color: $colorFourth;
+  }
 }

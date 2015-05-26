@@ -97,11 +97,11 @@
   height: 20px;
   width: 20px;
   background-image: url(img/icon-hamburger.png);
-  margin-left: 2em;
+  margin-left: 1.5em;
   @media (min-device-pixel-ratio: 2),
          (-webkit-min-device-pixel-ratio: 2) {
     background-image: url(img/icon-hamburger-2x.png);
-    background-size: 30px;
+    background-size: 20px;
   }
 }
 
