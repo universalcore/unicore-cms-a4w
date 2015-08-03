@@ -13,7 +13,8 @@ a {
 
 body,
 input,
-textarea {
+textarea,
+select {
   font-family: "Exo 2", sans-serif;
   color: $anotherShadeOfGrey;
 }
@@ -96,7 +97,7 @@ p {
 
 .article-header {
   @include clearfix;
-  padding: 0 1em 1em 1em;
+  padding: 0 1em 0 1em;
   .article-meta {
     float: left;
     padding-top: 0.75em;
@@ -290,6 +291,12 @@ textarea {
   margin: 1em 0 0.5em 0;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+   appearance: none;
+}
+
 // footer
 
 [role="contentinfo"] {
@@ -329,6 +336,7 @@ textarea {
   border-color: $anotherShadeOfGrey;
     &:last-child {
       padding-left: 0.5em;
+      margin-top: 0.5em;
     }
   }
 }
@@ -346,12 +354,12 @@ textarea {
   font-size: 1.25em;
   line-height: 1;
   input {
-    margin-right: 1em;
+    margin-right: 0.1em;
     position: relative;
-    top: -0.25em;
   }
   label {
     margin-bottom: 1em;
+    text-transform: none;
   }
 }
 
@@ -367,7 +375,7 @@ textarea {
 
 // profile, etc.
 
-.profile {
+.profile, .padded-page {
   padding: 5em 1em 1em 1em;
 }
 
@@ -414,7 +422,7 @@ form {
     font-weight: bold;
     margin-bottom: 0.5em;
   }
-  label > input {
+  label > input, label>select {
     margin-top: 0.5em;
   }
   input[type="text"],
@@ -422,7 +430,8 @@ form {
   input[type="search"],
   input[type="checkbox"],
   input[type="tel"],
-  input[type="password"] {
+  input[type="password"],
+  select {
     background-color: transparent;
     border: solid 1px $anotherShadeOfGrey;
   }
@@ -435,7 +444,7 @@ form {
 }
 
 .sign-up {
-  margin-top: 5em;
+  margin-top: 2em;
 }
 
 .list-article-teasers {
@@ -454,11 +463,64 @@ form {
 }
 
 .form-sign-in {
-  input {
+  input, select {
     color: $colorFourth;
   }
 }
 
+.rightAfter {
+    &:after {
+        right: 0!important;
+    }
+}
+
 html {
   -webkit-tap-highlight-color: transparent;
+}
+
+.over-text.post-heading-overlay-light {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+.over-text.post-heading-overlay-dark {
+    color: rgba(0, 0, 0, 0.3) !important;
+}
+.post-heading-title-color-light {
+    color: #333;
+}
+.post-heading-title-color-dark {
+    color: #fff;
+}
+.post-heading-category-light {
+    color: #666;
+}
+
+.post-heading-category-dark {
+    color: #bfbec5;
+}
+
+.poll-article-heading-text {
+    font-size: 1.25em;
+    text-transform: initial;
+}
+
+.form-register a {
+    text-decoration: underline;
+}
+
+.poll {
+    .poll-options {
+        label {
+            font-size: 0.8em;
+        }
+    }
+}
+
+.avatar-upload a{
+    display: block;
+}
+
+.avatar-upload {
+    label{
+        display: inline;
+    }
 }

@@ -1,4 +1,4 @@
-/* ==|== primary styles ===================================================== */
+/* ==|== primary styles ==================================================== */
 
 body {
   position: relative;
@@ -135,13 +135,15 @@ h1, h2, h3, h4 {
 
 // forms and validation
 
-input {
+input, select {
   padding: 0.5em;
   font-size: 0.9em;
 }
 
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+   appearance: textfield;
 }
 
 .error {
