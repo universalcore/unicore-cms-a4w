@@ -147,7 +147,11 @@
   display: block;
   position: absolute;
   top: 4.5em;
+  right: 0;
+  left: 0;
   z-index: 3;
-  width: 20em;
   max-width: 100%;
+  @media (min-width: 48em) {
+    padding: 0 11em;
+  }
 }

@@ -36,6 +36,9 @@
 
 .over {
   position: relative;
+  max-height: 25em;
+  text-align: center;
+  overflow: hidden;
   &:after {
     content: "";
     position: absolute;
@@ -50,10 +53,91 @@
     background-repeat: repeat;
     z-index: 0;
   }
+  @media (min-width: 85em) {
+    &:nth-of-type(2n+3) {
+      float: left;
+      width: 49.8%;
+      clear: left;
+      margin-top: 0.25em;
+    }
+    &:nth-of-type(2n) {
+      float: right;
+      width: 49.8%;
+      margin-top: 0.25em;
+    }
+  }
+  &:first-child {
+    .article-title {
+      margin-bottom: 0.5em;
+    }
+  }
+  img {
+    position: absolute;
+    left: 0;
+    top: -5em;
+    @media (min-width: 40em) {
+      top: -10em;
+    }
+    @media (min-width: 50em) {
+      top: -15em;
+    }
+    @media (min-width: 60em) {
+      top: -20em;
+    }
+    @media (min-width: 70em) {
+      top: -25em;
+    }
+    @media (min-width: 80em) {
+      top: -30em;
+    }
+  }
+  .link-comments {
+    text-align: left;
+    @media (min-width: 48em) {
+      right: 4em;
+    }
+  }
+}
+
+.over-text {
+  text-align: left;
+  @media (min-width: 48em) {
+    left: 7em;
+    right: 11em;
+  }
+  @media (min-width: 85em) {
+    right: 36em;
+  }
 }
 
 .over-poll {
   background-color: $colorFirst;
+}
+
+.cta {
+    clear: both;
+}
+
+
+.poll,
+article {
+  @media (min-width: 48em) {
+    padding-left: 7em;
+    padding-right: 20em;
+  }
+  @media (min-width: 85em) {
+    padding-right: 50em;
+  }
+}
+
+.comments {
+  @media (min-width: 48em) {
+    margin-left: 7em;
+    margin-right: 20em;
+  }
+  @media (min-width: 85em) {
+    margin-right: 50em;
+  }
 }
 
 .article-teaser-thumb {
@@ -110,6 +194,7 @@
     margin-bottom: 1em;
   }
   .nav {
+    max-width: 30em;
     a {
       font-size: 2em;
       text-transform: uppercase;
@@ -137,12 +222,37 @@
   }
 
   .nav-main-active {
-    width: 20em;
+    width: 11em;
     max-width: 100%;
   }
 
   #menu {
     @include displaymenu;
+    @media (min-width: 48em) {
+      .btn-wide {
+        width: 48%;
+        clear: left;
+      }
+      [for="username"],
+      [for="mobile-number"],
+      [for="id_gender"],
+      [for="id_identity"] {
+        width: 48%;
+        float: left;
+        clear: left;
+      }
+      [for="pin"],
+      [for="id_password1"],
+      [for="display_name"],
+      [for="id_year_of_birth"] {
+        width: 48%;
+        float: right;
+      }
+      [for="remember-me"],
+      [for="id_tos"] {
+        clear: left;
+      }
+    }
   }
 
   #close {
@@ -166,39 +276,22 @@
   }
 }
 
-
-@media (min-device-width: 50em) {
-  html {
-    padding-top: 4em;
-    &:before {
-      content: "This site is optimised for mobile viewing. Access this site on your mobile phone for the best user experience.";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #fff;
-      color: $colorSecond;
-      z-index: 1;
-      text-align: center;
-      line-height: 2;
-    }
-    &:after {
-      content: "This site is currently in beta.";
-      position: absolute;
-      top: 2em;
-      left: 0;
-      right: 0;
-      background: #e52d47 url(img/zigzag.png) 0 0 repeat;
-      color: white;
-      z-index: 1;
-      text-align: center;
-      line-height: 2;
-    }
-  }
+fieldset {
+  padding-bottom: 2em;
 }
 
 .logo {
   img {
     width: 85px;
+  }
+}
+
+// override max-widths set in css/enhanced.scss
+@media screen {
+  html {
+    max-width: none;
+    @media (min-device-width: 50em) {
+      max-width: none;
+    }
   }
 }
