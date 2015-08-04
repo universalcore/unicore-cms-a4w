@@ -150,6 +150,23 @@
   }
 }
 
+.over {
+  @media (min-width: 85em) {
+    &:nth-of-type(2n+3) {
+      .over-text {
+        left: 1em;
+        right: 1em;
+      }
+    }
+    &:nth-of-type(2n) {
+      .over-text {
+        left: 1em;
+        right: 1em;
+      }
+    }
+  }
+}
+
 .over-poll {
   background-color: $colorFirst;
 }
