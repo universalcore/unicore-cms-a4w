@@ -1,5 +1,7 @@
 @import "a4wcolors";
 
+$desktop-min-width: 80em;
+
 // dark grey
 .highlight-primary {
   background-color: $colorSecond;
@@ -53,7 +55,7 @@
     background-repeat: repeat;
     z-index: 0;
   }
-  @media (min-width: 85em) {
+  @media (min-width: $desktop-min-width) {
     &:nth-of-type(2n+3) {
       float: left;
       width: 49.8%;
@@ -145,13 +147,13 @@
     left: 7em;
     right: 11em;
   }
-  @media (min-width: 85em) {
+  @media (min-width: $desktop-min-width) {
     right: 36em;
   }
 }
 
 .over {
-  @media (min-width: 85em) {
+  @media (min-width: $desktop-min-width) {
     &:nth-of-type(2n+3) {
       .over-text {
         left: 1em;
@@ -182,7 +184,7 @@ article {
     padding-left: 7em;
     padding-right: 20em;
   }
-  @media (min-width: 85em) {
+  @media (min-width: $desktop-min-width) {
     padding-right: 50em;
   }
 }
@@ -192,7 +194,7 @@ article {
     margin-left: 7em;
     margin-right: 20em;
   }
-  @media (min-width: 85em) {
+  @media (min-width: $desktop-min-width) {
     margin-right: 50em;
   }
 }
